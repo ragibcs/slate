@@ -1,15 +1,21 @@
-app = "slate-jsc63g"
+# fly.toml app configuration file generated for slate-jsc63g on 2026-07-24T18:08:57Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'slate-jsc63g'
+primary_region = 'iad'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [http_service]
   internal_port = 80
   force_https = true
-  auto_stop_machines = "stop"
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
 
 [[vm]]
-  size = "shared-cpu-1x"
-  memory = "256mb"
+  size = 'shared-cpu-1x'
+  memory = '256mb'
